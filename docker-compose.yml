@@ -1,0 +1,18 @@
+services:
+  project-name-notebooks:
+    container_name: project-name-notebooks
+    ports:
+      - 4321:8888 # external port 4321 can be any port you want
+    volumes:
+     - .:/workspace
+    build: . 
+    deploy:
+      resources:
+        limits:  # optionally set depending on your jupyter needs
+          cpus: '7'
+          memory: 12G
+      reservations: # you can give the container access to the GPU (if there is CUDA)
+        devices:
+        - driver: nvidia
+          count: 1
+          capabilities: [gpu]
