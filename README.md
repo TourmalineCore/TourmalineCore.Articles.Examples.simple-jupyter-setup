@@ -23,6 +23,7 @@ To launch the JupyterLab in Docker:
     ```bash
     docker compose up --build -d project-name-notebooks
     ```
+    > If there is no GPU on the device, then the container will not be able to start. In this case, remove the `reservations` block from docker-compose.yml.
 
 2. Go to the following url in the browser: http://localhost:4321/lab
 
