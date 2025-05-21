@@ -1,4 +1,4 @@
-# версия python, которая совпадает с версией python в pyproject.toml
+# Python version that matches the Python version in pyproject.toml
 FROM python:3.11.11-slim
 
 ENV PYTHONFAULTHANDLER=1
