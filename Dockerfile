@@ -11,9 +11,7 @@ RUN apt-get update \
    # https://packages.debian.org/ru/sid/python3-dev
    && apt-get install -y --no-install-recommends python3-dev \
    && python -m pip install --upgrade pip \
-   && pip install poetry==2.1 \
-   && pip install ipykernel
-
+   && pip install poetry==2.1
 
 COPY pyproject.toml poetry.lock ./
 
